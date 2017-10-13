@@ -7,19 +7,22 @@ deposits and withdrawals.
 public class BankAccount
 {  
 private double balance;
-private int charge=5;
-private int monthly_transactions=5;
+private int charge;
+private int monthly_transactions;
 /**
    Constructs a bank account with a zero balance.
 */
 public BankAccount()
 {   
    balance = 0;
+   charge=5;
+   monthly_transactions=5;
 }
 
-/**
+/**mutator method
    Constructs a bank account with a given balance.
    @param initialBalance the initial balance
+   
 */
 public BankAccount(double initialBalance)
 {   
@@ -51,9 +54,10 @@ public void withdraw(double amount)
 	monthly_transactions--;
 }
 
-/**
+/**accessor method
    Gets the current balance of the bank account.
    @return the current balance
+   
 */
 public double getBalance()
 {   
